@@ -1,11 +1,8 @@
-FROM node:10
+FROM node:16
 
-MAINTAINER Daniel Espendiller <daniel@espendiller.net>
 
 # Install build-essential, sqlite in order
-RUN apt-get update && apt-get install -y \
-    sqlite \
-&& rm -rf /var/lib/apt/lists/*
+# RUN  apt install -y sqlite
 
 WORKDIR /usr/src/app
 
