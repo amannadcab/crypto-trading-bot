@@ -354,7 +354,7 @@ module.exports = class BinanceFutures {
   async syncPositionViaRestApi() {
     let response;
     try {
-      response = await this.ccxtClient.fapiPrivateGetPositionRisk();
+      response = await this.ccxtClient.fapiPrivateV2GetPositionRisk();
     } catch (e) {
       this.logger.error(`Binance Futures: error getting positions:${e}`);
       return;
